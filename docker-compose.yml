@@ -1,0 +1,29 @@
+version: '3.5'
+services:
+  postgresdb:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=payment
+    ports:
+      - 5432:5432
+    volumes:
+      - ./tmp/init.sql:/docker-entrypoint-initdb.d/init.sql
+  web:
+    image: golang
+    command: "go run ./cmd/run/main.go"
+    environment:
+      POSTGRES_HOST: postgresdb
+    ports:
+      - 8080:8080
+    working_dir: /app
+    volumes:
+      - .:/app
+    depends_on: 
+      - postgresdb
+
+
+    
+  
