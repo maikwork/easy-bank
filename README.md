@@ -1,4 +1,4 @@
-# easy-bank
+![Screenshot from 2022-09-26 20-41-20](https://user-images.githubusercontent.com/86742832/192344420-f214ad14-0f61-4ca9-9de0-c8e8c9fc4e34.png)
 
 https://user-images.githubusercontent.com/86742832/192262254-b957aad7-b172-4ec3-b640-85ac24a62c00.mp4
 
